@@ -1,0 +1,17 @@
+name: BloquesEfecto
+version: ${project.version}
+main: com.example.bloquesefecto.BloquesEfecto
+api-version: '26.3'
+description: Ciertos bloques dan efectos de pocion mientras estes cerca.
+commands:
+  bloquesefecto:
+    description: Recarga la configuracion
+    usage: /bloquesefecto reload
+    permission: bloquesefecto.admin
+permissions:
+  bloquesefecto.admin:
+    description: Permite recargar el plugin
+    default: op
+  bloquesefecto.use:
+    description: Permite recibir los efectos de los bloques
+    default: true

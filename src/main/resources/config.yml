@@ -1,0 +1,35 @@
+# BloquesEfecto
+# Mientras estes cerca de estos bloques, recibes el efecto de forma continua.
+# Al alejarte, el efecto desaparece en unos segundos.
+
+# Radio en bloques (maximo recomendado: 10)
+radius: 5
+
+# Cada cuantos ticks se revisa a los jugadores (20 ticks = 1 segundo)
+check-interval-ticks: 40
+
+# Duracion de cada aplicacion del efecto en ticks.
+# Debe ser mayor a 200 para que la vision nocturna no parpadee.
+effect-duration-ticks: 260
+
+show-particles: false
+
+# Lista de bloques. "effect" es el nombre del efecto de Minecraft (sin "minecraft:").
+# "amplifier": 0 = nivel I, 1 = nivel II, 2 = nivel III...
+blocks:
+  JACK_O_LANTERN:      # calabaza luminosa
+    effect: strength   # fuerza
+    amplifier: 0       # Fuerza I
+  LIGHTNING_ROD:       # pararrayos
+    effect: speed      # velocidad
+    amplifier: 0       # Velocidad I
+  SOUL_LANTERN:        # linterna de almas
+    effect: night_vision
+    amplifier: 0
+  END_ROD:             # vara del End
+    effect: resistance # resistencia ("defensa")
+    amplifier: 1       # Resistencia II
+
+messages:
+  reloaded: "&aBloquesEfecto recargado."
+  no-permission: "&cNo tienes permiso para hacer eso."
